@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CV — Hayqal Akbar Rizky Iskandar</title>
+<meta name="description" content="ATS-friendly CV of Hayqal Akbar Rizky Iskandar. Data Science and Machine Learning student. Python, SQL, Pandas, Streamlit, Tableau. Download as PDF.">
+<meta name="author" content="Hayqal Akbar Rizky Iskandar">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230B1017'/><text x='16' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%23F2B441' text-anchor='middle'>H</text></svg>">
+
+<style>
+/*  ATS RULES FOLLOWED HERE
+    - one column only, no tables, no text boxes, no images, no icons
+    - standard section headings in plain text
+    - normal fonts, black text on white
+    - real bullet lists, real text (not graphics)
+    - contact details written as plain text
+    Everything below is only spacing and size. The text stays readable
+    for software that scans the file.                                    */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: #E8E8E8;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #000000;
+  line-height: 1.38;
+}
+
+a { color: #000000; }
+
+:focus-visible { outline: 2px solid #0B1017; outline-offset: 3px; }
+
+.skip-link { position: absolute; left: -9999px; }
+.skip-link:focus { left: 8px; top: 8px; background: #FFFFFF; padding: 10px 14px; }
+
+/* ── bar with the buttons (never printed) ────────────────────────── */
+.bar {
+  position: sticky; top: 0; z-index: 10;
+  background: #0B1017;
+  padding: 12px 20px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 14px; flex-wrap: wrap;
+}
+.bar__back { color: #C9D1DE; font-size: 14px; text-decoration: none; }
+.bar__back:hover { color: #F2B441; }
+.bar__group { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.btn {
+  font-family: inherit; font-size: 14px; font-weight: bold;
+  padding: 10px 18px; border-radius: 6px; border: 1px solid transparent;
+  text-decoration: none; cursor: pointer;
+}
+.btn--main { background: #F2B441; color: #0B1017; }
+.btn--main:hover { background: #FFC65C; }
+.btn--plain { background: transparent; color: #C9D1DE; border-color: #3A4351; }
+.btn--plain:hover { color: #F2B441; border-color: #F2B441; }
+
+.bar__hint { width: 100%; margin: 0; color: #8A93A3; font-size: 12px; }
+
+/* ── the paper ───────────────────────────────────────────────────── */
+.page-wrap { padding: 24px 14px 60px; }
+
+.cv {
+  width: 210mm;
+  margin: 0 auto;
+  background: #FFFFFF;
+  padding: 15mm 16mm;
+  box-shadow: 0 18px 44px rgba(0,0,0,.28);
+  font-size: 11pt;
+}
+
+.cv h1 {
+  font-size: 20pt; margin: 0 0 3px; letter-spacing: .3px;
+}
+.cv .job-title {
+  font-size: 12pt; font-weight: bold; margin: 0 0 6px;
+}
+.cv .contact {
+  font-size: 10pt; margin: 0; font-style: normal;
+}
+.cv .contact a { text-decoration: none; }
+
+.cv h2 {
+  font-size: 11.5pt;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  margin: 14px 0 6px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #000000;
+}
+
+.cv h3 {
+  font-size: 11pt; margin: 0; font-weight: bold;
+}
+
+.cv p { margin: 0 0 4px; }
+
+.item { margin-bottom: 8px; }
+.item:last-child { margin-bottom: 0; }
+.item .line {
+  font-size: 10pt; margin: 1px 0 3px;
+}
+.item .date { font-size: 10pt; margin: 0 0 3px; }
+
+.cv ul { margin: 3px 0 0; padding-left: 18px; }
+.cv li { margin-bottom: 1px; font-size: 10.5pt; }
+
+.plain-list { list-style: none; padding-left: 0; margin: 0; }
+.plain-list li { margin-bottom: 3px; }
+
+/* ── small screens ───────────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .cv { width: 100%; padding: 20px; font-size: 10.5pt; }
+}
+
+/* ── printing / save as PDF ──────────────────────────────────────── */
+@page { size: A4; margin: 14mm 15mm; }
+
+@media print {
+  body { background: #FFFFFF; }
+  .bar { display: none !important; }
+  .page-wrap { padding: 0; }
+  .cv {
+    width: auto; margin: 0; padding: 0;
+    box-shadow: none; font-size: 10.5pt;
+  }
+  .cv h2 { margin-top: 11px; }
+  .cv { line-height: 1.32; }
+  .item, .cv h2, .cv li { page-break-inside: avoid; break-inside: avoid; }
+  .cv h2 { page-break-after: avoid; break-after: avoid; }
+  a { text-decoration: none; }
+}
+</style>
+</head>
+<body>
+
+<a href="#cv" class="skip-link">Skip to CV</a>
+
+<div class="bar">
+  <a class="bar__back" href="index.html">&larr; Back to portfolio</a>
+  <div class="bar__group">
+    <button class="btn btn--main" type="button" id="download">Download CV (PDF)</button>
+    <a class="btn btn--plain" href="mailto:akbarhaikal267@gmail.com">Email me</a>
+  </div>
+  <p class="bar__hint">The print window will open. Choose "Save as PDF" to get the file. This CV is made for ATS software: one column, plain text, no images.</p>
+</div>
+
+<div class="page-wrap">
+<main class="cv" id="cv">
+
+  <h1>Hayqal Akbar Rizky Iskandar</h1>
+  <p class="job-title">Data Science and Machine Learning Student</p>
+  <address class="contact">
+    Yogyakarta, Indonesia &bull;
+    Phone: +62 812-2901-1942 &bull;
+    Email: <a href="mailto:akbarhaikal267@gmail.com">akbarhaikal267@gmail.com</a><br>
+    GitHub: github.com/Hayqal1 &bull;
+    Tableau Public: public.tableau.com/app/profile/hayqal.akbar.rizky.iskandar
+  </address>
+
+  <h2>Summary</h2>
+  <p>
+    Informatics student at Universitas Ahmad Dahlan with a focus on data science and
+    machine learning. I use Python, SQL, Pandas, Streamlit, and Tableau to clean data,
+    analyse it, and build dashboards. I finished the Data Scientist track of the
+    DBS Foundation and Dicoding Coding Camp. I studied one semester in Malaysia as an
+    exchange student. I also worked as a teaching assistant for basic programming.
+    I want to work in data analysis and turn data into clear answers.
+  </p>
+
+  <h2>Skills</h2>
+  <ul class="plain-list">
+    <li><strong>Programming languages:</strong> Python, SQL</li>
+    <li><strong>Data analysis:</strong> Pandas, NumPy, Matplotlib, Seaborn, RFM analysis, data cleaning, exploratory data analysis</li>
+    <li><strong>Charts and dashboards:</strong> Streamlit, Tableau, Microsoft Excel</li>
+    <li><strong>Machine learning:</strong> supervised learning basics, model evaluation, statistics and mathematics for data science</li>
+    <li><strong>Tools:</strong> Git, GitHub, Jupyter Notebook</li>
+    <li><strong>Product and project:</strong> user research, product requirement document (PRD), backlog and sprint planning, Agile</li>
+    <li><strong>Soft skills:</strong> teamwork, teaching, public speaking, event coordination</li>
+  </ul>
+
+  <h2>Education</h2>
+
+  <div class="item">
+    <h3>Universitas Ahmad Dahlan, Yogyakarta, Indonesia</h3>
+    <p class="line">Bachelor of Informatics (Computer Science)</p>
+    <p class="date">October 2023 &ndash; Present. Study focus: data science and machine learning.</p>
+  </div>
+
+  <div class="item">
+    <h3>Universiti Malaysia Pahang Al-Sultan Abdullah, Pahang, Malaysia</h3>
+    <p class="line">Student Mobility Programme, Informatics</p>
+    <p class="date">September 2025 &ndash; February 2026. One semester abroad, Informatics courses in English and Malay.</p>
+  </div>
+
+  <div class="item">
+    <h3>DBS Foundation and Dicoding Coding Camp</h3>
+    <p class="line">Scholarship student, Data Scientist track</p>
+    <p class="date">2026. Training in Python, SQL, data analysis, data visualisation, and machine learning.</p>
+  </div>
+
+  <h2>Work Experience</h2>
+
+  <div class="item">
+    <h3>Teaching Assistant, Basic Programming</h3>
+    <p class="line">Computer Laboratory, Informatics Department, Universitas Ahmad Dahlan</p>
+    <p class="date">Odd Semester 2024/2025</p>
+    <ul>
+      <li>Helped students during basic programming lab sessions in the Networking Laboratory.</li>
+      <li>Explained programming topics and helped students fix errors in their code.</li>
+      <li>Checked lab work and gave feedback to students.</li>
+    </ul>
+  </div>
+
+  <h2>Projects</h2>
+
+  <div class="item">
+    <h3>E-Commerce Analytics Dashboard</h3>
+    <p class="line">Python, Streamlit, Pandas, Matplotlib</p>
+    <ul>
+      <li>Built an interactive dashboard for 96,467 orders and 93,347 customers.</li>
+      <li>Showed the monthly order trend, the best-selling product categories, and customer locations by region.</li>
+      <li>Added RFM segmentation that puts customers into five groups, from Champions to Lost.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <h3>Customer Segmentation with RFM</h3>
+    <p class="line">Python, Pandas, RFM analysis</p>
+    <ul>
+      <li>Used Recency, Frequency, and Monetary values to group 93,347 customers into five segments.</li>
+      <li>Found that 40.1% are Potential Loyalists and 17.1% are At Risk.</li>
+      <li>Suggested different marketing actions for each group.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <h3>Consumer Electronics Sales Analysis</h3>
+    <p class="line">Tableau, Microsoft Excel</p>
+    <ul>
+      <li>Made six worksheets from 9,000 rows of sales data and joined them into one dashboard.</li>
+      <li>Analysed average price per category, customers per brand, buying interest by gender, customer satisfaction, price range, and category mix.</li>
+      <li>Published the work on Tableau Public.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <h3>GrabFood Product Analysis and Feature Planning</h3>
+    <p class="line">Product management, user research, PRD, Agile</p>
+    <ul>
+      <li>Read and analysed 2,000 Play Store reviews in an eight-session case study.</li>
+      <li>Found 164 reviews about promo code problems with an average rating of 2.62.</li>
+      <li>Wrote a product requirement document and a backlog for two sprints.</li>
+    </ul>
+  </div>
+
+  <h2>Organisational Experience</h2>
+
+  <div class="item">
+    <h3>Committee Member, 23rd Branch Meeting</h3>
+    <p class="line">IMM, Faculty of Industrial Technology, Universitas Ahmad Dahlan. November 2024.</p>
+  </div>
+
+  <div class="item">
+    <h3>Logistics Coordinator</h3>
+    <p class="line">Informatics Student Election Committee, Universitas Ahmad Dahlan. December 2023.</p>
+  </div>
+
+  <div class="item">
+    <h3>Logistics Coordinator</h3>
+    <p class="line">Informatics Student Congress, HMIF, Universitas Ahmad Dahlan. December 2023.</p>
+  </div>
+
+  <div class="item">
+    <h3>Logistics Staff</h3>
+    <p class="line">Informatics Anniversary Celebration, HMIF, Universitas Ahmad Dahlan. November 2023.</p>
+  </div>
+
+  <h2>Certifications</h2>
+  <ul>
+    <li>Machine Learning for Beginners &ndash; Dicoding, March 2026 (90 hours), ID MRZMWLD9KPYQ</li>
+    <li>Basics of Data Analysis &ndash; Dicoding, March 2026 (70 hours), ID N9ZON50G6XG5</li>
+    <li>Mathematics for Data Science &ndash; Dicoding, April 2026 (70 hours), ID JMZVODL23XN9</li>
+    <li>Basics of Data Processing &ndash; Dicoding, April 2026 (70 hours), ID JLX1V24K5Z72</li>
+    <li>Introduction to Data Science &ndash; Dicoding, February 2026 (11 hours), ID L4PQ93M8OPO1</li>
+    <li>Introduction to Data Visualisation &ndash; Dicoding, February 2026 (16 hours), ID ERZRL4WQ2ZYV</li>
+    <li>Introduction to AI &ndash; Dicoding, February 2025 (10 hours), ID N9ZO9OYQDXG5</li>
+    <li>Getting Started with Python Programming &ndash; Dicoding, February 2026 (60 hours), ID QLZ99K357Z5D</li>
+    <li>Introduction to Structured Query Language (SQL) &ndash; Dicoding, March 2025 (11 hours), ID JMZVEL87NPN9</li>
+    <li>Introduction to Git with GitHub &ndash; Dicoding, February 2026 (15 hours), ID L4PQ9R832PO1</li>
+    <li>Basic Programming for Software Developers &ndash; Dicoding, February 2026, ID N9ZON336RXG5</li>
+    <li>Introduction to Programming Logic 101 &ndash; Dicoding, February 2026 (6 hours), ID RVZK09LEOZD5</li>
+    <li>Introduction to Cybersecurity &ndash; Cisco Networking Academy, March 2025</li>
+    <li>Introduction to Financial Literacy &ndash; Dicoding, December 2025, ID 0LZ05E73NX65</li>
+    <li>Coding Camp 2026 &ndash; DBS Foundation and Dicoding, 2026</li>
+    <li>Student Mobility Programme &ndash; Universiti Malaysia Pahang Al-Sultan Abdullah, 2025&ndash;2026</li>
+    <li>PARADOKS Leadership Training &ndash; HMIF, Universitas Ahmad Dahlan, October 2023</li>
+  </ul>
+
+  <h2>Languages</h2>
+  <p>Indonesian (native) &bull; English (professional working level) &bull; Malay (conversational)</p>
+
+</main>
+</div>
+
+<script>
+  document.getElementById('download').addEventListener('click', function () {
+    window.print();
+  });
+
+  // Give the saved file a clean name in the print dialog.
+  window.addEventListener('beforeprint', function () {
+    document.title = 'CV-Hayqal-Akbar-Rizky-Iskandar';
+  });
+  window.addEventListener('afterprint', function () {
+    document.title = 'CV — Hayqal Akbar Rizky Iskandar';
+  });
+</script>
+
+</body>
+</html>
